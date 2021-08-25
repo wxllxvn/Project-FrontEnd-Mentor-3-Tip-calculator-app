@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -7,38 +7,62 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Bill
+  <div class="container">
+    <div class="values">
+      <form action="">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
 
-  Number of People
+        <label for="bill">Bill</label>
+        <div class="inp-bill">
+          <img src="images/icon-dollar.svg" alt="icon-dollar">
+          <input type="number" name="bill" id="bill" class="values-input">
+        </div>
 
-  Tip Amount
-  / person
 
-  Total
-  / person
+        <label for="tip">Select Tip %</label>
+        <div class="inp-tip" id="tip">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <input type="number" name="tip" id="inp-tip-field" placeholder="Custom">
+        </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+        <div class="number-people">
+          Number of People
+          <div class="inp-people">
+            <img src="images/icon-person.svg" alt="icon-person">
+            <input type="number" name="people" id="people">
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="total">
+      <div class="total-values">
+        <div class="row-total">
+          <div class="span-total">
+            <p class="p-total">Tip Amount</p>
+            <p class="p-total-sub">/ person</p>
+          </div>
+          <span class="final-value" id="final-tip">0</span>
+        </div>
+        <div class="row-total">
+          <div class="span-total">
+            <p class="p-total">Total</p>
+            <p class="p-total-sub">/ person</p>
+          </div>
+          <span class="final-value" id="final-total">0</span>
+        </div>
+      </div>
+      <a href="#" class="btn" id="btn-reset">Reset</a>
+    </div>
   </div>
 </body>
 </html>
