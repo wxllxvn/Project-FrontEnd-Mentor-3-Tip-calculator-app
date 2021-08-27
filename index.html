@@ -8,6 +8,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  
   
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -32,11 +34,11 @@
 
         <label for="tip" class="label-title">Select Tip %</label>
         <div class="inp-tip" id="tip">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <button value="5">5%</button>
+          <button value="10">10%</button>
+          <button value="15">15%</button>
+          <button value="25">25%</button>
+          <button value="50">50%</button>
           <input type="number" name="tip" id="inp-tip-field" placeholder="Custom">
         </div>
 
@@ -44,7 +46,7 @@
         <div class="number-people new-field">
           <img src="images/icon-person.png" alt="icon-person" >
           <div>
-            <input type="number" name="people" id="people" class="input-fields" placeholder="0">
+            <input type="number" name="people" id="people" class="input-fields" placeholder="0" minlength="1" maxlength="5">
           </div>
         </div>
       </form>
@@ -58,17 +60,19 @@
             <p class="p-total">Tip Amount</p>
             <p class="p-total-sub">/ person</p>
           </div>
-          <span class="final-value" id="final-tip">0</span>
+          <span class="final-value" id="final-tip">$0,00</span>
         </div>
         <div class="row-total">
           <div class="span-total">
             <p class="p-total">Total</p>
             <p class="p-total-sub">/ person</p>
           </div>
-          <span class="final-value" id="final-total">0</span>
+          <span class="final-value" id="final-total">$0,00</span>
         </div>
       </div>
-      <a href="#" class="btn" id="btn-reset">Reset</a>
+      <div class="btn-area">
+        <a href="#" class="btn" id="btn-reset">Reset</a>
+      </div>
     </div>
   </div>
 </body>
