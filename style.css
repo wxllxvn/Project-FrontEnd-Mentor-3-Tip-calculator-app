@@ -141,6 +141,10 @@ input::placeholder{
     margin-bottom: 3rem;
 }
 
+.border-cyan{
+    border: var(--Strong-cyan) solid 2px;
+}
+
 
 
 
