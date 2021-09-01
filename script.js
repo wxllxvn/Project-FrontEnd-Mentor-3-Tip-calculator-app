@@ -6,6 +6,8 @@ window.onload=function(){
 
     const bill = document.getElementById('bill');
     const people = document.getElementById('people');
+    var btns = document.getElementsByClassName('btns');
+    console.log(btns)
 
     function borderOnInt(){
         var inpBill = document.getElementById('intBillBorder');
@@ -32,14 +34,16 @@ window.onload=function(){
     };
 
 
-    function selectTip(){
-        console.log(event.target.id);
-    };
+    for(var i = 0; i < btns.length; i++){
+        btns[i].addEventListener("click", function(){
+            console.log(this)
+        })
+    }
 
+    console.log(btns.length)
     bill.addEventListener('click', borderOnInt);
-    people.addEventListener('click', borderOffInt)
-
-    people.addEventListener('click', borderOnP)
+    people.addEventListener('click', borderOffInt);
+    people.addEventListener('click', borderOnP);
 
 
     
