@@ -20,7 +20,7 @@
 
   <img src="images/logo.png" alt="logo" class="logo">
 
-  <div class="container">
+  <div class="container" id="container">
     <div class="values">
       <form action="">
 
@@ -37,16 +37,16 @@
 
         <label for="tip" class="label-title">Select Tip %</label>
         <div class="inp-tip" id="tip">
-          <button value="5">5%</button>
-          <button value="10">10%</button>
-          <button value="15">15%</button>
-          <button value="25">25%</button>
-          <button value="50">50%</button>
+          <button value="5" id="btn1" onclick="selectTip()">5%</button>
+          <button value="10" id="btn2">10%</button>
+          <button value="15" id="btn3">15%</button>
+          <button value="25" id="btn4">25%</button>
+          <button value="50" id="btn5">50%</button>
           <input type="number" name="tip" id="inp-tip-field" placeholder="Custom">
         </div>
 
         <label for="" class="label-title">Number of People</label>
-        <div class="number-people new-field">
+        <div class="number-people new-field" id="people-border">
           <img src="images/icon-person.png" alt="icon-person" >
           <div>
             <input type="number" name="people" id="people" class="input-fields" placeholder="0" minlength="1" maxlength="5">
