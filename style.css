@@ -217,7 +217,15 @@ input::placeholder{
     display: block;
 }
 
+.label-area{
+    display: flex;
+    justify-content: space-between;
+}
 
+.verific{
+    display: none;
+
+}
 
 
 
