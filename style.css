@@ -173,6 +173,7 @@ input::placeholder{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .span-total{
@@ -267,4 +268,14 @@ input::placeholder{
     .total-values{
         width: 100%;
     }
+
+    .final-value{
+        font-size: 2rem;
+    }
+
+    .span-total{
+        margin-right: 0;
+    }
+
+    
 }
