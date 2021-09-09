@@ -34,8 +34,7 @@ body{
 }
 
 .logo{
-    position: absolute;
-    top: 4rem;
+    margin-bottom: 2rem;
 }
 .values{
     margin-right: 5rem;
@@ -52,6 +51,7 @@ body{
 .inp-bill, .number-people{
     display: flex;
     flex-direction: row;
+
 }
 
 .input-fields{
@@ -228,4 +228,43 @@ input::placeholder{
 }
 
 
+@media (max-width: 800px){
+    .container{
+        width: 100%;
+    }
+}
 
+
+@media (max-width: 730px){
+    .container{
+        flex-direction: column;
+    }
+
+    .values{
+        width: 100%;
+    }
+
+    .new-field{
+        width: 100%;
+    }
+
+    .inp-tip{
+        width: 100%;
+    }
+
+    .inp-tip a, #inp-tip-field{
+        width: 10rem;
+    }
+
+
+}
+
+@media (max-width: 395px){
+    .total, .values{
+        width: 100%;
+    }
+
+    .total-values{
+        width: 100%;
+    }
+}
