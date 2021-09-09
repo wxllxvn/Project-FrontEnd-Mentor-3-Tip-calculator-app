@@ -12,6 +12,7 @@
   <!-- JS -->
   <script src="script.js"></script>
 
+
   
   
   <title>Frontend Mentor | Tip calculator app</title>
@@ -40,12 +41,12 @@
 
         <label for="tip" class="label-title">Select Tip %</label>
         <div class="inp-tip" id="tip">
-          <a id="5" class="btns">5%</a>
-          <a id="10" class="btns">10%</a>
-          <a id="15" class="btns">15%</a>
-          <a id="25" class="btns">25%</a>
-          <a id="50" class="btns">50%</a>
-          <input type="number" name="tip" id="inp-tip-field" placeholder="Custom">
+          <a onclick="bgBtn(5)" id="5" class="btns test">5%</a>
+          <a onclick="bgBtn(10)" id="10" class="btns test">10%</a>
+          <a onclick="bgBtn(15)" id="15" class="btns test">15%</a>
+          <a onclick="bgBtn(25)" id="25" class="btns test">25%</a>
+          <a onclick="bgBtn(50)" id="50" class="btns test">50%</a>
+          <input type="number" name="tip" id="inp-tip-field" placeholder="Custom" >
         </div>
 
         <div class="label-area">
@@ -85,5 +86,23 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function bgBtn(item){
+      button = document.getElementById(item)
+      test = document.getElementsByClassName('test')
+
+      for(var p = 0; p < test.length; p++){
+        test[p].style.backgroundColor = '#00494d'
+      }
+
+      button.style.backgroundColor = '#7f9c9f';
+
+
+      console.log(item);
+
+    }
+    
+  </script>
 </body>
 </html>

@@ -7,7 +7,7 @@ window.onload=function(){
     var bill = document.getElementById('bill');
     var people = document.getElementById('people');
     var btns = document.getElementsByClassName('btns');
-    console.log(btns)
+    var inpTip = document.getElementById('inp-tip-field');
 
     function borderOnInt(){
         var inpBill = document.getElementById('intBillBorder');
@@ -43,7 +43,6 @@ window.onload=function(){
             let peopleVisibility = document.getElementById('verific-id-2');
             let peopleBorder = document.getElementById('people-border');
             var tip = this.id;
-            var back = this.style;
             tip = parseInt(tip);
             var valor = parseInt(bill.value);
             var total = valor * (tip/100);
@@ -73,9 +72,52 @@ window.onload=function(){
         })
     }
 
+
+
+
+
+    inpTip.addEventListener("change", function(){
+        var tipAmount = document.getElementById('final-tip');
+        var totalPerson = document.getElementById('final-total');
+        let billArea = document.getElementById('intBillBorder');
+        let billVisibility = document.getElementById('verific-id');
+        let peopleVisibility = document.getElementById('verific-id-2');
+        let peopleBorder = document.getElementById('people-border');
+        var value = inpTip.value;
+        var valorFinal = parseInt(bill.value) * (value/100);
+        console.log(valorFinal)
+
+
+        if(bill.value == ''){
+            billArea.style.border = '1px solid #FF0000'
+            billVisibility.style.display = 'block'
+        }else if(people.value == ''){
+            billArea.style.border = 'none'
+            billVisibility.style.display = 'none'
+            peopleBorder.style.border = '1px solid #FF0000'
+            peopleVisibility.style.display = 'block'
+        } 
+        else{
+            billArea.style.border = 'none'
+            billVisibility.style.display = 'none'
+            peopleBorder.style.border = 'none'
+            peopleVisibility.style.display = 'none'
+            tipAmount.innerHTML = "$" + (valorFinal/parseInt(people.value)).toFixed(2)
+            totalPerson.innerHTML = "$" + (bill.value/parseInt(people.value)+valorFinal/parseInt(people.value)).toFixed(2)
+            console.log(people.value)
+            console.log(bill.value)
+            console.log(tipAmount.innerHTML)
+            console.log(parseFloat(total))
+        }
+    })
+
+
+
+
     bill.addEventListener('click', borderOnInt);
     people.addEventListener('click', borderOffInt);
     people.addEventListener('click', borderOnP);
+
 
 
     

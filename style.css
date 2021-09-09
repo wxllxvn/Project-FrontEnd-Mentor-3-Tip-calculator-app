@@ -9,8 +9,8 @@
 }
 
 :root{
-    --Very-dark-cyan: hsl(183, 100%, 15%);
-    --Dark-grayish-cyan: hsl(184, 14%, 56%);
+    --Very-dark-cyan: #00494d;
+    --Dark-grayish-cyan: #7f9c9f;
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Light-grayish-cyan-2: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
