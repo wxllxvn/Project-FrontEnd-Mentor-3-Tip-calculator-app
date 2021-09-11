@@ -22,6 +22,7 @@ html{
     font-size: 62.5%;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
+    min-width: 375px;
 }
 
 body{
@@ -38,6 +39,10 @@ body{
 }
 .values{
     margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container{
@@ -257,6 +262,18 @@ input::placeholder{
         width: 10.9rem;
     }
 
+    .btn-area{
+        margin-top: 3rem;
+    }
+
+
+}
+
+
+@media (max-width: 413px){
+    .inp-tip a, #inp-tip-field{
+        width: 47%;
+    }
 
 }
 
@@ -270,7 +287,7 @@ input::placeholder{
     }
 
     .final-value{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .span-total{
